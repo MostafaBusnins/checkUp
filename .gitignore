@@ -24,3 +24,6 @@ envTest/
 static/uploads/
 
 .env
+
+# Ignore model files
+model/*.pthmodel/*.pth
