@@ -300,6 +300,9 @@ def internal_error(e):
 if __name__ == '__main__':
     # Create upload directory if it doesn't exist
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+    host = os.getenv('FLASK_HOST', '127.0.0.1')  # default local
+    port = int(os.getenv('FLASK_PORT', 5000))
+    debug = os.getenv('FLASK_ENV', 'production') == 'development'
 
     print("🚀 Starting Integrated Medical Analysis System...")
     print("📊 Image prediction model loaded")
@@ -307,4 +310,4 @@ if __name__ == '__main__':
     print("🔍 Prediction context tracking enabled")
     print("🌐 Web interface available at http://localhost:5001")
 
-    app.run(debug=True, host='0.0.0.0', port=5001)
+    app.run(debug=debug, host=host, port=port)
