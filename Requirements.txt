@@ -2,6 +2,18 @@ Flask==2.3.2
 Flask-CORS==4.0.0
 requests==2.31.0
 python-dotenv==1.0.0
-# logging==0.5.1.2
 gunicorn==21.2.0
-groq==0.3.0  # Official Groq Python library
+groq==0.3.0
+
+# Machine Learning
+torch==2.2.2
+torchvision==0.17.2
+numpy==1.26.4
+Pillow==10.3.0
+
+# لو بتستخدم chatbots أو sessions:
+openai==1.30.3
+uuid==1.30  # لو فعلاً محتاجه، لكن uuid مدمج غالبًا
+
+# لو فيه PDF أو رسم بياني
+matplotlib==3.8.4  # لو بترسم أي حاجة
